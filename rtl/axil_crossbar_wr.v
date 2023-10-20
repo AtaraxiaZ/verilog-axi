@@ -94,10 +94,12 @@ module axil_crossbar_wr #
     input  wire [S_COUNT*3-1:0]             s_axil_awprot,
     input  wire [S_COUNT-1:0]               s_axil_awvalid,
     output wire [S_COUNT-1:0]               s_axil_awready,
+
     input  wire [S_COUNT*DATA_WIDTH-1:0]    s_axil_wdata,
     input  wire [S_COUNT*STRB_WIDTH-1:0]    s_axil_wstrb,
     input  wire [S_COUNT-1:0]               s_axil_wvalid,
     output wire [S_COUNT-1:0]               s_axil_wready,
+
     output wire [S_COUNT*2-1:0]             s_axil_bresp,
     output wire [S_COUNT-1:0]               s_axil_bvalid,
     input  wire [S_COUNT-1:0]               s_axil_bready,
@@ -109,10 +111,12 @@ module axil_crossbar_wr #
     output wire [M_COUNT*3-1:0]             m_axil_awprot,
     output wire [M_COUNT-1:0]               m_axil_awvalid,
     input  wire [M_COUNT-1:0]               m_axil_awready,
+
     output wire [M_COUNT*DATA_WIDTH-1:0]    m_axil_wdata,
     output wire [M_COUNT*STRB_WIDTH-1:0]    m_axil_wstrb,
     output wire [M_COUNT-1:0]               m_axil_wvalid,
     input  wire [M_COUNT-1:0]               m_axil_wready,
+
     input  wire [M_COUNT*2-1:0]             m_axil_bresp,
     input  wire [M_COUNT-1:0]               m_axil_bvalid,
     output wire [M_COUNT-1:0]               m_axil_bready
